@@ -1,0 +1,16 @@
+# Citation
+
+Preferred citation for @mwakidenis/logx-react:
+
+Denis, M. (2026). LOGX React Toolkit (@mwakidenis/logx-react). GitHub.
+https://github.com/mwakidenis/logx-react-toolkit
+
+BibTeX:
+
+@software{logx_react_toolkit_2026,
+  author = {Mwaki Denis},
+  title = {LOGX React Toolkit},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/mwakidenis/logx-react-toolkit}
+}
