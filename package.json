@@ -7,7 +7,7 @@
   "homepage": "https://github.com/mwakidenis/logx-react-toolkit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mwakidenis/logx-react-toolkit.git"
+    "url": "git+https://github.com/mwakidenis/logx-react-toolkit.git"
   },
   "bugs": {
     "url": "https://github.com/mwakidenis/logx-react-toolkit/issues"
