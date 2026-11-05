@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d2759736459af683 # v4.2.2
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea02e44b59867f53c8174a155776b42c5c6 # v4.4.0
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Type check
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Run tests
+        env:
+          NODE_OPTIONS: --experimental-require-module
+        run: npm test
+      - name: Production build
+        run: npm run build
+      - name: Package integrity check
+        run: npm run pack:check
