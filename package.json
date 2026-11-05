@@ -1,0 +1,127 @@
+{
+  "name": "@mwakidenis/logx-react",
+  "version": "0.1.0",
+  "description": "A modular, lightweight, SSR-safe React utility toolkit built on @mwakidenis/logx. Provides hooks, components, utilities and providers for production React applications.",
+  "author": "Mwaki Denis",
+  "license": "MIT",
+  "homepage": "https://github.com/mwakidenis/logx-react-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mwakidenis/logx-react-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mwakidenis/logx-react-toolkit/issues"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "typescript",
+    "javascript",
+    "react-utilities",
+    "react-toolkit",
+    "custom-hooks",
+    "developer-tools",
+    "frontend",
+    "web-development",
+    "logx",
+    "open-source"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js"
+    },
+    "./hooks/storage": {
+      "types": "./dist/hooks/storage/index.d.ts",
+      "import": "./dist/hooks/storage/index.mjs",
+      "require": "./dist/hooks/storage/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
+    },
+    "./utilities": {
+      "types": "./dist/utilities/index.d.ts",
+      "import": "./dist/utilities/index.mjs",
+      "require": "./dist/utilities/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts"
+    },
+    "./providers": {
+      "types": "./dist/providers/LogxProvider.d.ts",
+      "import": "./dist/providers/LogxProvider.mjs",
+      "require": "./dist/providers/LogxProvider.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@mwakidenis/logx": "^0.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^26.6.6",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/parser": "^8.72.1",
+    "@vitejs/plugin-react": "^4.5.2",
+    "@vitest/coverage-v8": "^4.1.12",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.9.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "std-env": "^3.10.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^6.2.0",
+    "vitest": "^4.1.12"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist .turbo node_modules/.cache",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"tests/**/*.{ts,tsx}\" \"*.{js,json,md,ts}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\" \"tests/**/*.{ts,tsx}\" \"*.{js,json,md,ts}\"",
+    "pack:check": "npm pack --dry-run"
+  }
+}
